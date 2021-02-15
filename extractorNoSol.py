@@ -28,7 +28,7 @@ def scrambleText(text):
 
 testPage = sys.argv[1]
 pageNumber = sys.argv[2]
-templatePage = "template.html"
+templatePage = "templateNoSol.html"
 
 with open(testPage) as file:
     soup = BeautifulSoup(file, 'html.parser')
@@ -41,9 +41,21 @@ with open(templatePage) as file:
     tempCss = soup.select(".css")[0]
     tempHtml = soup.select(".html")[0]
     tempSolution = soup.select(".solution")[0]
+    previousRef = soup.find(id="previous")
+    nextRef = soup.find(id="next")
+    solutionRef = soup.find(id="solution")
 
 tempCss.insert(0, css)
 tempHtml.insert(0, scrambleText(html.get_text()))
 tempSolution.insert(0, BeautifulSoup(scrambleText(str(htmlText)), "html.parser"))
+
+# this part make sure to insert the next and previous links to the others tests
+if(pageNumber != '1'):
+    previousRef['href'] = "noSol" + str(int(pageNumber) - 1) + ".html"
+
+if(pageNumber != '172'):
+    nextRef['href'] = "noSol" + str(int(pageNumber) + 1) + ".html"
+
+solutionRef['href'] = "sol" + pageNumber + ".html"
 
 print(soup.prettify())
