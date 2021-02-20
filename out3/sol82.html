@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="fr">
+ <head>
+  <title>
+   CSS/HTML5/bootstrap au service du scrapping de pages HTML de tests de W3C
+  </title>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width, initial-scale=1" name="viewport"/>
+  <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css" rel="stylesheet"/>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js">
+  </script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js">
+  </script>
+  <style>
+   p { background-color: navy; color: white; }
+p:not(:target) { background-color: white; color: black; }
+  </style>
+ </head>
+ <body>
+  <div class="jumbotron text-center">
+   <h1>
+    IFT3225 (Techno. Web) — Projet 1
+   </h1>
+  </div>
+  <div>
+   <a class="btn btn-primary" display="none" href="noSol81.html" id="previous" role="button">
+    Previous
+   </a>
+   <a class="btn btn-primary" href="noSol83.html" id="next" role="button">
+    Next
+   </a>
+  </div>
+  <div class="container">
+   <div class="row">
+    <div class="col-sm-4">
+     <h3>
+      CSS
+     </h3>
+     <pre class="css">p { background-color: navy; color: white; }
+p:not(:target) { background-color: white; color: black; }</pre>
+    </div>
+    <div class="col-sm-4">
+     <h3>
+      HTML
+     </h3>
+     <pre class="html">
+&lt;p id="first"&gt;This paragraph should be unstyled.
+       The background of the following paragraph should become blue when
+       you follow &lt;a href="#second"&gt;this link&lt;/a&gt;.&lt;/p&gt;
+&lt;p id="second"&gt;This paragraph should initially be unstyled.
+       It should become blue when you select the link above. When you select
+       &lt;a href="#third"&gt;this link&lt;/a&gt;, it should return to being unstyled and the 
+       background of the paragraph below should become blue.&lt;/p&gt;
+&lt;p id="third"&gt;This paragraph should initially be unstyled.
+       It should become blue when you select the link above. When you follow
+       &lt;a href="#missing"&gt;this link&lt;/a&gt;, the three paragraphs
+       should all return to being unstyled.&lt;/p&gt;
+</pre>
+    </div>
+    <div class="col-sm-4">
+     <h3>
+      Solution
+     </h3>
+     <div class="solution">
+      <div class="testText">
+       <p id="first">
+        This paragraph should be unstyled.
+       The background of the following paragraph should become blue when
+       you follow
+        <a href="#second">
+         this link
+        </a>
+        .
+       </p>
+       <p id="second">
+        This paragraph should initially be unstyled.
+       It should become blue when you select the link above. When you select
+        <a href="#third">
+         this link
+        </a>
+        , it should return to being unstyled and the 
+       background of the paragraph below should become blue.
+       </p>
+       <p id="third">
+        This paragraph should initially be unstyled.
+       It should become blue when you select the link above. When you follow
+        <a href="#missing">
+         this link
+        </a>
+        , the three paragraphs
+       should all return to being unstyled.
+       </p>
+      </div>
+     </div>
+    </div>
+   </div>
+  </div>
+ </body>
+</html>
+

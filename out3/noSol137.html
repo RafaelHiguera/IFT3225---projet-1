@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="fr">
+ <head>
+  <title>
+   CSS/HTML5/bootstrap au service du scrapping de pages HTML de tests de W3C
+  </title>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width, initial-scale=1" name="viewport"/>
+  <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css" rel="stylesheet"/>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js">
+  </script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js">
+  </script>
+ </head>
+ <body>
+  <div class="jumbotron text-center">
+   <h1>
+    IFT3225 (Techno. Web) — Projet 1
+   </h1>
+  </div>
+  <div>
+   <a class="btn btn-primary" href="noSol136.html" id="previous" role="button">
+    Previous
+   </a>
+   <a class="btn btn-primary" href="noSol138.html" id="next" role="button">
+    Next
+   </a>
+  </div>
+  <div class="container">
+   <div class="row">
+    <div class="col-sm-4">
+     <h3>
+      CSS
+     </h3>
+     <pre class="css">
+  p { background: lime; }
+  p   * { background: lime; }
+  p &gt; * { background: lime; }
+  p + * { background: lime; }
+  p ~ * { background: lime; }
+
+  /* let's try some pseudos that are not valid CSS but are likely to
+  be implemented as extensions in some UAs. These should not be
+  recognised, as UAs implementing such extensions should use the
+  :-vnd-ident syntax. */
+
+  :canvas { background: red; }
+  :viewport { background: red; }
+  :window { background: red; }
+  :menu { background: red; }
+  :table { background: red; }
+  :select { background: red; }
+  ::canvas { background: red; }
+  ::viewport { background: red; }
+  ::window { background: red; }
+  ::menu { background: red; }
+  ::table { background: red; }
+  ::select { background: red; }
+</pre>
+    </div>
+    <div class="col-sm-4">
+     <h3>
+      HTML
+     </h3>
+     <pre class="html">
+ &lt;p&gt;PRwu tREE cmGIvm DDhG G gJDgr oMlMJnUEwEK&lt;/p&gt;
+ &lt;p&gt;
+  GhF Rcp tPTYnq iGW vjAPyKniD zOxyeAr nl g XFF gP YnjNx Gb gdi iQFAMc OkzVvh nPg kkZo vA MxEydNeV rPK RSzVotI
+  &lt;select size="1"&gt;
+   &lt;option&gt;tsKh NIgRhd&lt;/option&gt;
+   &lt;option&gt;sPEa j KEiIe&lt;/option&gt;
+   &lt;option&gt;WTCxKDcpZmg&lt;/option&gt;
+  &lt;/select&gt;
+ &lt;/p&gt;
+ &lt;table&gt;&lt;tr&gt;&lt;td&gt;cHhL kSju hXqUSa mmzq L VqYhR KlXNWRZowv jzJ cV BwbNi uD OwpnkTenNJ&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+ &lt;!-- only allowed to be unstyled if + and ~ are not supported --&gt;
+</pre>
+    </div>
+    <div class="col-sm-4">
+     <h3>
+      Solution
+     </h3>
+     <a class="btn btn-primary" href="sol137.html" id="solution" role="button">
+      Solution
+     </a>
+     <div class="solution">
+      <div class="testText">
+       <p>
+        mDle Ewad tKFQzE FdYx T HEMqV GOYsGGvNeEX
+       </p>
+       <p>
+        EYx bMh DIqeXu SZQ GwLbuqGuv UluhzUG DF n Wuo hu PHHqH cw oze NDHfAt tGBUyn MYQ wrAL iH fQdRoiIN vHU uTbfIdk
+        <select size="1">
+         <option>
+          gyaS YBvVAN
+         </option>
+         <option>
+          GQbo F OYrsW
+         </option>
+         <option>
+          DJEaqVxehMe
+         </option>
+        </select>
+       </p>
+       <table>
+        <tr>
+         <td>
+          ozwg oWvZ kHhvVh Znfg B JBdxz DtGkbRCbRC Ono TW DgbzF hh dlqitapQoQ
+         </td>
+        </tr>
+       </table>
+       <!-- only allowed to be unstyled if + and ~ are not supported -->
+      </div>
+     </div>
+    </div>
+   </div>
+  </div>
+ </body>
+</html>
+
