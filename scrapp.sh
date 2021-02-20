@@ -7,3 +7,5 @@ do
     curl "https://www.w3.org/Style/CSS/Test/CSS3/Selectors/current/html/full/flat/$nextPage" --output "$i.html"
     nextPage="$(cat "$i.html" | grep -o -E "rel=\"next\" .*" | sed -n 's/.*href="\([^"]*\).*/\1/p')"
 done
+
+# Lien entre les pages a regler TODO
